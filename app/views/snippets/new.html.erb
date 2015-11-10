@@ -1,0 +1,15 @@
+<%= form_for @snippet do |f| %>
+  <div>
+    <%= f.label :code_id %>
+    <%= f.select :code_id, [['Ruby','1'],['HTML','2'],['CSS','3'],['Javascript','4']] %>
+  </div>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+  <%= f.label :work %>
+  <%= f.text_area :work %>
+  </div>
+  <%= f.submit %>
+<% end %>

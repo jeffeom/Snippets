@@ -1,0 +1,20 @@
+<h1>
+  <% if @code.id == 1 %>
+    <%= "Ruby" %>
+  <% elsif @code.id == 2 %>
+    <%= "HTML" %>
+  <% elsif @code.id == 3 %>
+    <%= "CSS" %>
+  <% else %>
+    <%= "Javascript" %>
+  <% end %>
+</h1>
+
+<div>
+  <% @snippets.each do |snip| %>
+    <% if snip.code_id == @code.id %>
+      <%= link_to snip.title, code_snippet_path(snip.code_id, snip.id) %>
+      <br>
+    <% end %>
+  <% end %>
+</div>

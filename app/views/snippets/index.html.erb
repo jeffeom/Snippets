@@ -1,0 +1,17 @@
+<h1>Index</h1>
+<div>
+  <% s = Snippet.where(code_id: '1').all %>
+  <%= link_to "Ruby " + "(#{s.length}" + " Snippets)", code_path(1) %>
+</div>
+<div>
+  <% s = Snippet.where(code_id: '2').all %>
+  <%= link_to "HTML " + "(#{s.length}" + " Snippets)", code_path(2)%>
+</div>
+<div>
+  <% s = Snippet.where(code_id: '3').all %>
+  <%= link_to "CSS " + "(#{s.length}" + " Snippets)", code_path(3) %>
+</div>
+<div>
+  <% s = Snippet.where(code_id: '4').all %>
+  <%= link_to "Javascript " + "(#{s.length}" + " Snippets)", code_path(4) %>
+</div>
